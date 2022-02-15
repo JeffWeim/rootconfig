@@ -18,7 +18,8 @@ const applications = constructApplications({
   routes,
   loadApp: ({ name }) => System.import(name),
 });
-// Delay starting the layout engine until the styleguide CSS is loaded
+
+// Delay starting the layout engine until the root-config is loaded
 const layoutEngine = constructLayoutEngine({
   routes,
   applications,
@@ -27,8 +28,8 @@ const layoutEngine = constructLayoutEngine({
 
 applications.forEach(registerApplication);
 
-System.import("@react-mf/styleguide").then(() => {
-  // Activate the layout engine once the styleguide CSS is loaded
+System.import("./jeffweim-root-config.js").then(() => {
+  // Activate the layout engine once the root-config is loaded
   layoutEngine.activate();
   start();
 });

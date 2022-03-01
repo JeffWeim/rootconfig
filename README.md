@@ -12,6 +12,10 @@ This repository is a javascript project that creates a javascript bundle that is
 
 This project uses [React](https://reactjs.org) and was created with the [create-single-spa](https://single-spa.js.org/docs/create-single-spa) CLI. It uses webpack and babel.
 
+The other projects that this container application uses are:
+- https://github.com/JeffWeim/doggos
+- https://github.com/JeffWeim/navigation
+
 
 ## Local development
 

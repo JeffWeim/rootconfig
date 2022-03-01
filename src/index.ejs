@@ -59,7 +59,9 @@
 </head>
 <body>
   <script>
-    System.import('./jeffweim-root-config.js');
+    console.log(window.location.origin)
+
+    System.import(window.location.origin + '/jeffweim-root-config.js');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>

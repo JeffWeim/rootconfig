@@ -28,7 +28,7 @@ const layoutEngine = constructLayoutEngine({
 
 applications.forEach(registerApplication);
 
-System.import("./jeffweim-root-config.js").then(() => {
+System.import(`${window.location.origin}/jeffweim-root-config.js`).then(() => {
   // Activate the layout engine once the root-config is loaded
   layoutEngine.activate();
   start();
